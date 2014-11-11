@@ -1,0 +1,30 @@
+@namespace url("http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul"); /* set default namespace to XUL */
+
+.tabbrowser-tab[selected] {
+	background-color: #39424D !important;
+	box-shadow: none !important;
+}
+
+#PanelUI-button {
+	background-image: none !important;
+}
+
+.autocomplete-history-dropmarker {
+	display: none !important;
+}
+
+#urlbar-reload-button .toolbarbutton-icon {
+	filter: grayscale(1) brightness(200%);
+}
+
+.toolbarbutton-menubutton-dropmarker:before {
+	display: none !important;
+}
+
+#nav-bar #PanelUI-menu-button {
+	padding: 0px 5px 0px 0px !important;
+}
+
+#page-proxy-favicon, .close-icon {
+	filter: grayscale(1) brightness(200%);
+}
