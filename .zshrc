@@ -60,7 +60,7 @@ alias sublime='/opt/sublime_text_3/sublime_text'
 
 export EDITOR="emacs"
 export TERM="xterm"
-export PATH=$PATH:~/dotfiles/panel/
+export PATH=$PATH:~/.config/bspwm/panel/
 
 #------------------------------
 # Functions
