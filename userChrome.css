@@ -28,3 +28,7 @@
 #page-proxy-favicon, .close-icon {
 	filter: grayscale(1) brightness(200%);
 }
+
+.tabs-newtab-button .toolbarbutton-icon {
+    filter: grayscale(1) brightness(200%);
+}

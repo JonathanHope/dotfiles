@@ -1,0 +1,2 @@
+compton --config ~/.config/compton/compton.conf -b
+feh --bg-center ~/Dropbox/Photos/IMG_5352.jpg

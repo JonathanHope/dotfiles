@@ -52,7 +52,6 @@ alias cp='cp -i'
 alias rm='rm -i'
 alias mv='mv -i'
 alias top='htop'
-alias sublime='/opt/sublime_text_3/sublime_text'
 
 #------------------------------
 # Variables
@@ -60,7 +59,6 @@ alias sublime='/opt/sublime_text_3/sublime_text'
 
 export EDITOR="emacs"
 export TERM="xterm"
-export PATH=$PATH:~/.config/bspwm/panel/
 
 #------------------------------
 # Functions
@@ -87,15 +85,4 @@ extract ()
   else
       echo "'$1' is not a valid file!"
   fi
-}
-
-# usage: pacsearch <name>
-pacsearch() 
-{
-   echo -e "$(pacman -Ss "$@" | sed \
-     -e 's#^core/.*#\\033[1;34m&\\033[0;37m#g' \
-     -e 's#^extra/.*#\\033[0;32m&\\033[0;37m#g' \
-     -e 's#^community/.*#\\033[1;31m&\\033[0;37m#g' \
-     -e 's#^.*/.* [0-9].*#\\033[0;34m&\\033[0;37m#g' ) \
-     \033[0m"
 }
