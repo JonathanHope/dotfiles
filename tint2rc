@@ -1,0 +1,108 @@
+# ID 1
+rounded = 0
+border_width = 0
+background_color = #2B303B 95
+border_color = #FFFFFF 0
+ 
+# ID 2
+rounded = 3
+border_width = 0
+background_color = #000000 50
+border_color = #FFFFFF 0
+ 
+# ID 3
+rounded = 3
+border_width = 0
+background_color = #FFFFFF 7
+border_color = #FFFFFF 0
+ 
+panel_monitor = 1
+panel_position = top left horizontal
+panel_items = TSBC
+panel_size = 0 24
+panel_margin = 0 0
+panel_padding = 3 0 0
+panel_dock = 0
+wm_menu = 0
+panel_layer = top
+panel_background_id = 1
+font_shadow = 1
+ 
+autohide = 0
+autohide_show_timeout = 0.0
+autohide_hide_timeout = 0.0
+autohide_height = 0
+strut_policy = follow_size
+ 
+taskbar_mode = multi_desktop
+taskbar_padding = 0 0 3
+taskbar_background_id = 0
+#taskbar_active_background_id = 0
+taskbar_name = 1
+taskbar_name_padding = 3 0 0
+taskbar_name_background_id = 0
+taskbar_name_active_background_id = 0
+taskbar_name_font = Envy Code R 10
+taskbar_name_font_color = #4F5B66 100
+taskbar_name_active_font_color = #C0C5CE 100
+ 
+urgent_nb_of_blink = 6
+task_icon = 1
+task_text = 0
+task_centered = 1
+task_maximum_size = 18
+task_padding =  4 4
+task_background_id = 0
+task_active_background_id = 0
+task_urgent_background_id = 3
+task_iconified_background_id = 0
+ 
+task_icon_asb = 33 0 0
+task_active_icon_asb = 100 0 0
+task_urgent_icon_asb = 100 0 0
+task_iconified_icon_asb = 33 0 0
+ 
+task_font = Arial 8
+task_font_color = #FFFFFF 100
+task_active_font_color = #FFFFFF 100
+task_urgent_font_color = #FFFFFF 100
+task_iconified_font_color = #FFFFFF 100
+font_shadow = 0
+ 
+systray = 1
+systray_padding = 6 0 6
+systray_sort = ascending
+systray_background_id = 0
+systray_icon_size = 16
+systray_icon_asb = 50 0 0
+ 
+time1_format = %m/%d/%y %H:%M:%S
+time1_font = Envy Code R 8
+time2_format =
+time2_font = Envy Code R 8
+clock_font_color = #C0C5CE 100
+clock_padding = 6 1
+clock_background_id = 0
+ 
+tooltip = 0
+tooltip_padding = 0 0
+tooltip_show_timeout = 0
+tooltip_hide_timeout = 0
+tooltip_background_id = 0
+tooltip_font = Sans 12
+tooltip_font_color = #FFFFFF 100
+ 
+mouse_middle = close
+mouse_right = none
+mouse_scroll_up = maximize_restore
+mouse_scroll_down = none
+ 
+battery = 1
+battery_low_status = 20
+battery_low_cmd = notify-send "Battery Low."
+battery_hide = 80
+bat1_font = Envy Code R 8
+bat2_font = Envy Code R 8
+battery_font_color = #C0C5CE 100
+battery_padding = 6 0
+battery_background_id = 0

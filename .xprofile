@@ -1,3 +1,8 @@
+xrdb ~/.Xresources &
+
+udiskie --tray &
+nm-applet &
+
 xset fp+ "/usr/share/fonts/dina"
 PANEL_FIFO="/tmp/panel-fifo"
 PATH=$PATH:~/.config/bspwm/panel/

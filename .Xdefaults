@@ -56,6 +56,3 @@ Xft.antialias: true
 Xft.rgba: rgb
 Xft.hinting: true
 Xft.hintstyle: hintslight
-
-Xcursor.theme: Ardoise_translucent
-Xcursor.size: 24

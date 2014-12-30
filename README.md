@@ -18,4 +18,5 @@ Misc. Linux config files.
 
 ## TODO
 
-* X cursor misbahving in Emacs
+* GTK theme of tray icons.
+* Can tint2 have a right and left margin.

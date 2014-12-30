@@ -46,12 +46,19 @@ RPROMPT='[%{%F{blue}%}%~%{%f%}]'
 #------------------------------
 
 alias ls='ls --color=auto -F -la'
-alias hostip='wget http://checkip.dyndns.org/ -O - -o /dev/null | cut -d: -f 2 | cut -d\< -f 1'
 alias sudo='sudo '
 alias cp='cp -i'
 alias rm='rm -i'
 alias mv='mv -i'
 alias top='htop'
+
+# Network
+alias hostip='wget http://checkip.dyndns.org/ -O - -o /dev/null | cut -d: -f 2 | cut -d\< -f 1'
+alias ls-wifi='nmcli dev wifi list'
+alias ls-con='nmcli con list'
+
+# Storage
+alias ls-dev='ls /media'
 
 #------------------------------
 # Variables
@@ -85,4 +92,28 @@ extract ()
   else
       echo "'$1' is not a valid file!"
   fi
+}
+
+# Network
+
+touch-wifi ()
+{
+  # TODO
+}
+
+rm-con ()
+{
+  nmcli con delete uuid $1;
+}
+
+# Storage
+
+umount-dev ()
+{
+  udiskie-umount --detach /media/$1;
+}
+
+cd-dev ()
+{
+  cd /media/$1
 }
