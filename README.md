@@ -4,19 +4,19 @@ Misc. Linux config files.
 
 ##Dependencies
 
-* Dina font
 * Envy Code R font
 * FlatStudioLight gtk theme
 * HighContrast gtk icon theme
-* Ardoise cursor
+* A background
 
 ## Application Coverage
 
-* URXVT
+* urxvt
 * Firefox Developer Edition
-* Emacs
+* bspwm
+* compton
+* tint2
+* zsh
+* feh
 
 ## TODO
-
-* GTK theme of tray icons.
-* Can tint2 have a right and left margin.

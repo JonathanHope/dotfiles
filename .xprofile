@@ -1,6 +1,6 @@
 xrdb ~/.Xresources &
 
-udiskie --tray &
+udiskie -N --tray &
 nm-applet &
 
 xset fp+ "/usr/share/fonts/dina"
