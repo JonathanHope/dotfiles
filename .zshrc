@@ -45,12 +45,17 @@ RPROMPT='[%{%F{blue}%}%~%{%f%}]'
 # Aliases
 #------------------------------
 
+# General
 alias ls='ls --color=auto -F -la'
 alias sudo='sudo '
 alias cp='cp -i'
 alias rm='rm -i'
 alias mv='mv -i'
 alias top='htop'
+
+# Music
+alias rip-cd='abcde'
+alias update-music-db='beet import ~/Music'
 
 # Network
 alias hostip='wget http://checkip.dyndns.org/ -O - -o /dev/null | cut -d: -f 2 | cut -d\< -f 1'
@@ -116,4 +121,9 @@ umount-dev ()
 cd-dev ()
 {
   cd /media/$1
+}
+
+github-clone ()
+{
+  git clone ssh://git@github.com/$1/$2.git
 }
