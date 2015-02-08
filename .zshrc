@@ -55,7 +55,10 @@ alias top='htop'
 
 # Music
 alias rip-cd='abcde'
-alias update-music-db='beet import ~/Music'
+alias update-music-db='beet import ~/Music && mpc update'
+alias pull-music='cd ~/gdrive && ~/.gopath/bin/drive pull Music'
+alias push-music='cd ~/gdrive && ~/.gopath/bin/drive push Music'
+alias play-music='ncmpcpp'
 
 # Network
 alias hostip='wget http://checkip.dyndns.org/ -O - -o /dev/null | cut -d: -f 2 | cut -d\< -f 1'
@@ -127,3 +130,6 @@ github-clone ()
 {
   git clone ssh://git@github.com/$1/$2.git
 }
+
+PERL_MB_OPT="--install_base \"/home/jonathan/perl5\""; export PERL_MB_OPT;
+PERL_MM_OPT="INSTALL_BASE=/home/jonathan/perl5"; export PERL_MM_OPT;
