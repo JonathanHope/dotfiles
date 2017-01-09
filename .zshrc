@@ -1,83 +1,36 @@
-#-------------------------------------------------
-# File: .zshrc
-# Author: Jonathan Hope
-# License: MIT
-# Summary: This is my zsh config
-#-------------------------------------------------
-
 #------------------------------
-# History
+# Oh My Zsh
 #------------------------------
 
-HISTFILE=~/.histfile
-HISTSIZE=1000
-SAVEHIST=1000
+export ZSH=/home/jonathan/.oh-my-zsh
+
+COMPLETION_WAITING_DOTS="true"
+plugins=(git lein)
+source $ZSH/oh-my-zsh.sh
 
 #------------------------------
-# Auto Complete
+# Exports
 #------------------------------
 
-autoload -U compinit promptinit
-compinit
-promptinit
-
-zstyle ':completion:*:pacman:*' force-list always
-zstyle ':completion:*:*:pacman:*' menu yes select
-
-zstyle ':completion:*:default' list-colors ${(s.:.)LS_COLORS}
-
-zstyle ':completion:*:*:kill:*' menu yes select
-zstyle ':completion:*:kill:*'   force-list always
-
-zstyle ':completion:*:*:killall:*' menu yes select
-zstyle ':completion:*:killall:*'   force-list always
+export LANG=en_US.UTF-8
+export EDITOR='emacs'
+export SSH_KEY_PATH="~/.ssh/rsa_id"
 
 #------------------------------
 # Prompt
 #------------------------------
 
-autoload -U colors && colors
+PROMPT='⦗%{%F{green}%}%n%{%f%}❙%{%F{red}%}%m%{%f%}⦘: '
+RPROMPT='⦗%{%F{blue}%}%~%{%f%}⦘'
 
-PROMPT='[%{%F{green}%}%n%{%f%}@%{%F{red}%}%m%{%f%}]: '
-RPROMPT='[%{%F{blue}%}%~%{%f%}]'
+eval "$(dircolors ~/.lscolors)";
 
 #------------------------------
-# Aliases
+# Aliases / Functions
 #------------------------------
 
-# General
-alias ls='ls --color=auto -F -la'
-alias sudo='sudo '
-alias cp='cp -i'
-alias rm='rm -i'
-alias mv='mv -i'
-alias top='htop'
-
-# Music
-alias rip-cd='abcde'
-alias update-music-db='beet import ~/Music && mpc update'
-alias pull-music='cd ~/gdrive && ~/.gopath/bin/drive pull Music'
-alias push-music='cd ~/gdrive && ~/.gopath/bin/drive push Music'
-alias play-music='ncmpcpp'
-
-# Network
 alias hostip='wget http://checkip.dyndns.org/ -O - -o /dev/null | cut -d: -f 2 | cut -d\< -f 1'
-alias ls-wifi='nmcli dev wifi list'
-alias ls-con='nmcli con list'
-
-# Storage
-alias ls-dev='ls /media'
-
-#------------------------------
-# Variables
-#------------------------------
-
-export EDITOR="emacs"
-export TERM="xterm"
-
-#------------------------------
-# Functions
-#------------------------------
+alias magit='emacs --eval "(revert-default-directory)" --eval "(magit-status)" --eval "(delete-other-windows)"'
 
 # usage: extract <filename>
 extract () 
@@ -102,34 +55,15 @@ extract ()
   fi
 }
 
-# Network
-
-touch-wifi ()
-{
-  # TODO
+# usage up <number>
+function up {
+    if [[ "$#" < 1 ]] ; then
+        cd ..
+    else
+        CDSTR=""
+        for i in {1..$1} ; do
+            CDSTR="../$CDSTR"
+        done
+        cd $CDSTR
+    fi
 }
-
-rm-con ()
-{
-  nmcli con delete uuid $1;
-}
-
-# Storage
-
-umount-dev ()
-{
-  udiskie-umount --detach /media/$1;
-}
-
-cd-dev ()
-{
-  cd /media/$1
-}
-
-github-clone ()
-{
-  git clone ssh://git@github.com/$1/$2.git
-}
-
-PERL_MB_OPT="--install_base \"/home/jonathan/perl5\""; export PERL_MB_OPT;
-PERL_MM_OPT="INSTALL_BASE=/home/jonathan/perl5"; export PERL_MM_OPT;

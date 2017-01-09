@@ -84,7 +84,7 @@ super + Return
 	urxvt
 
 super + space
-	dmenu_run -fn "xft:Envy Code R:size=10" -nb "#2b303b" -nf "#c0c5ce"
+	lighthouse | sh
 
 # make sxhkd reload its configuration files:
 super + Escape

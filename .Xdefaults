@@ -44,14 +44,16 @@
 URxvt*background: [95]#2b303b
 URxvt*depth: 32
 URxvt*geometry: 80x80  
-URxvt*font: xft:Envy Code R:size=10
+URxvt*font: xft:PragmataPro:size=10
+URxvt.boldFont: xft:PragmataPro:size=10
 URxvt*scrollBar: false
+URxvt.letterSpace: -1
 
 !------------------------------
 ! Font
 !------------------------------
 
-Xft.dpi: 96
+Xft.dpi: 101
 Xft.antialias: true
 Xft.rgba: rgb
 Xft.hinting: true
