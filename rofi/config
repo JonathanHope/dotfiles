@@ -1,0 +1,9 @@
+rofi.color-enabled: true
+rofi.color-window: #2b303b, #002b36, #b48ead
+rofi.color-normal: #2b303b, #eff1f5, #2b303b, #343d46, #ebcb8b
+rofi.font: PragmataPro Regular 11
+rofi.bw: 0
+rofi.padding: 2
+rofi.terminal: termite
+rofi.hide-scrollbar: true
+rofi.fuzzy: true

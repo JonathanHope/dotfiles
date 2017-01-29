@@ -1,5 +1,0 @@
-compton --config ~/.config/compton/compton.conf -b
-feh --bg-center ~/Pictures/signalbojar_1920_badge.jpg
-xfce4-power-manager &
-xfce4-volumed &
-mpd &

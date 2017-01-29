@@ -2,59 +2,16 @@
 ! File: .Xdefaults
 ! Author: Jonathan Hope
 ! License: MIT
-! Summary: This is my urxvt config.
-!-------------------------------------------------
-
-!------------------------------
-! Colors
-!------------------------------
-
-*background: #2b303b
-*foreground: #c0c5ce
-
-! Black
-*color0: #2b303b
-*color8: #65737e
-! Red 
-*color1: #bf616a
-*color9: #d08770
-! Green
-*color2: #a3be8c
-*color10: #343d46
-! Yellow
-*color3: #ebcb8b
-*color11: #4f5b66
-! Blue
-*color4: #8fa1b3
-*color12: #a7adba
-! Magenta
-*color5: #b48ead
-*color13: #dfe1e8
-! Cyan
-*color6: #96b5b4
-*color14: #ab7967
-! White
-*color7: #c0c5ce
-*color15: #eff1f5
-
-!------------------------------
-! Terminal
-!------------------------------
-
-URxvt*background: [95]#2b303b
-URxvt*depth: 32
-URxvt*geometry: 80x80  
-URxvt*font: xft:PragmataPro:size=10
-URxvt.boldFont: xft:PragmataPro:size=10
-URxvt*scrollBar: false
-URxvt.letterSpace: -1
+ !-------------------------------------------------
 
 !------------------------------
 ! Font
 !------------------------------
 
-Xft.dpi: 101
-Xft.antialias: true
-Xft.rgba: rgb
-Xft.hinting: true
+Xft.dpi: 100
+Xft.autohint: 0
+Xft.lcdfilter: lcddefault
 Xft.hintstyle: hintslight
+Xft.hinting: 1
+Xft.antialias: 1
+Xft.rgba: rgb

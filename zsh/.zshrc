@@ -1,14 +1,4 @@
 #------------------------------
-# Oh My Zsh
-#------------------------------
-
-export ZSH=/home/jonathan/.oh-my-zsh
-
-COMPLETION_WAITING_DOTS="true"
-plugins=(git lein)
-source $ZSH/oh-my-zsh.sh
-
-#------------------------------
 # Exports
 #------------------------------
 
@@ -20,10 +10,16 @@ export SSH_KEY_PATH="~/.ssh/rsa_id"
 # Prompt
 #------------------------------
 
-PROMPT='⦗%{%F{green}%}%n%{%f%}❙%{%F{red}%}%m%{%f%}⦘: '
-RPROMPT='⦗%{%F{blue}%}%~%{%f%}⦘'
+PROMPT='[%{%F{green}%}%n%{%f%}@%{%F{red}%}%m%{%f%}]: '
+RPROMPT='[%{%F{blue}%}%~%{%f%}]'
 
-eval "$(dircolors ~/.lscolors)";
+#------------------------------
+# Completion
+#------------------------------
+
+autoload -Uz compinit
+compinit
+zstyle ':completion:*' menu select
 
 #------------------------------
 # Aliases / Functions
@@ -31,9 +27,12 @@ eval "$(dircolors ~/.lscolors)";
 
 alias hostip='wget http://checkip.dyndns.org/ -O - -o /dev/null | cut -d: -f 2 | cut -d\< -f 1'
 alias magit='emacs --eval "(revert-default-directory)" --eval "(magit-status)" --eval "(delete-other-windows)"'
+alias udm='udisksctl mount -b /dev/sdb1'
+alias udu='udisksctl unmount -b /dev/sdb1'
+alias restart='sudo shutdown -r now'
 
 # usage: extract <filename>
-extract () 
+extract ()
 {
   if [ -f $1 ] ; then
       case $1 in
@@ -47,7 +46,7 @@ extract ()
           *.tgz)       tar xvzf $1    ;;
           *.zip)       unzip $1       ;;
           *.Z)         uncompress $1  ;;
-          *.7z)        7z x $1        ;;
+          *.7z)        7zr x $1        ;;
           *)           echo "don't know how to extract '$1'..." ;;
       esac
   else
@@ -66,4 +65,10 @@ function up {
         done
         cd $CDSTR
     fi
+}
+
+#usage nix? <package name>
+function search-packages ()
+{
+    nix-env -qa \* -P | grep -i "$1" | less;
 }
