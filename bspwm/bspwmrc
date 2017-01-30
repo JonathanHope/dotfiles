@@ -22,7 +22,7 @@ bspc monitor -d ❶ ❷ ❸ ❹ ❺
 feh --bg-scale ~/Images/by_billboards_2560.jpg
 compton --config ~/.config/compton/compton.conf -b
 tint2 &
-#xfce4-volumed &
-volumeicon &
+dropbox &
+pnmixer &
 udiskie -N --tray &
 nm-applet &
