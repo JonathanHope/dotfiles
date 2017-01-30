@@ -2,7 +2,7 @@
 font = PragmataPro Regular 10
 
 [colors]
-background =  #2b303b
+background =  rgba(43,48,59,0.98)
 foreground =  #c0c5ce
 color0 = #2b303b
 color1 = #bf616a
