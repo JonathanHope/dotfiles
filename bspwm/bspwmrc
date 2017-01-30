@@ -21,9 +21,8 @@ bspc monitor -d ❶ ❷ ❸ ❹ ❺
 
 feh --bg-scale ~/Images/by_billboards_2560.jpg
 compton --config ~/.config/compton/compton.conf -b
-# tint2 &
-# xfce4-power-manager &
-# xfce4-volumed &
-# mpd &
-# udiskie -N --tray &
-# wicd-gtk -t &
+tint2 &
+#xfce4-volumed &
+volumeicon &
+udiskie -N --tray &
+nm-applet &

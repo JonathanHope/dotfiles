@@ -1,0 +1,4 @@
+* TODO Better ZSH prompt.
+* TODO Investigate Antigen.
+* TODO Better Firefox theming.
+* TODO Better panel when polybar is more easily installed in NixOS.
