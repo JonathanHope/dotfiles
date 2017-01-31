@@ -1,0 +1,33 @@
+:root.theme-dark {
+  --theme-body-background: #2b303b !important;
+  --theme-sidebar-background: #2b303b !important;
+
+  --theme-tab-toolbar-background: #2b303b !important;
+  --theme-toolbar-background: #343d46 !important;
+  --theme-selection-background: #343d46 !important;
+
+  --theme-body-color: #eff1f5 !important;
+  --theme-body-color-alt: #eff1f5 !important;
+  --theme-content-color1: #eff1f5 !important;
+  --theme-content-color2: #eff1f5 !important;
+  --theme-content-color3: #eff1f5 !important;
+
+  --theme-highlight-green: #a3be8c !important;
+  --theme-highlight-blue: #8fa1b3 !important;
+  --theme-highlight-bluegrey: #eff1f5 !important;
+  --theme-highlight-lightorange: #d08770 !important;
+  --theme-highlight-orange: #ebcb8b !important;
+  --theme-highlight-red: #bf616a !important;
+  --theme-highlight-pink: #b48ead !important;
+
+  --theme-graphs-green: #70bf53;
+  --theme-graphs-blue: #8fa1b3;
+  --theme-graphs-bluegrey: #eff1f5;
+  --theme-graphs-purple: #b48ead;
+  --theme-graphs-yellow: #ebcb8b;
+  --theme-graphs-orange: #d08770;
+  --theme-graphs-red: #ab7967;
+  --theme-graphs-grey: #a7adba;
+  --theme-graphs-full-red: #bf616a;
+  --theme-graphs-full-blue: #96b5b4;
+}
