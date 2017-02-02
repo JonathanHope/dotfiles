@@ -14,6 +14,12 @@ PROMPT='%F{magenta}⬢ ━❰%f %{%B%F{green}%}%n%{%f%b%}%F{cyan} %B➤%b%f %{%B
 RPROMPT='%F{magenta}⬢ ━❰%f %{%B%F{blue}%}%~%{%f%b%} %F{magenta}❱━⬢%f'
 
 #------------------------------
+# Colors
+#------------------------------
+
+eval $(dircolors ~/.lscolors)
+
+#------------------------------
 # Completion
 #------------------------------
 
@@ -22,10 +28,15 @@ compinit
 zstyle ':completion:*' menu select
 
 #------------------------------
-# Colors
+# Antigen
 #------------------------------
 
-eval $(dircolors ~/.lscolors)
+source ~/antigen/antigen.zsh
+
+antigen bundle zsh-users/zsh-syntax-highlighting
+antigen bundle zsh-users/zsh-completions
+antigen bundle zsh-users/zsh-autosuggestions
+antigen apply
 
 #------------------------------
 # Aliases / Functions
