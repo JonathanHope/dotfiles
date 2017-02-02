@@ -10,7 +10,7 @@ export SSH_KEY_PATH="~/.ssh/rsa_id"
 # Prompt
 #------------------------------
 
-PROMPT='%F{magenta}⬢ ━❰%f %{%B%F{green}%}%n%{%f%b%}%F{cyan} ➤%f %{%B%F{red}%}%m%{%f%b%} %F{magenta}❱━⬢%f  %B%F{yellow}𝛌%f%b '
+PROMPT='%F{magenta}⬢ ━❰%f %{%B%F{green}%}%n%{%f%b%}%F{cyan} %B➤%b%f %{%B%F{red}%}%m%{%f%b%} %F{magenta}❱━⬢%f  %B%F{yellow}𝛌%f%b '
 RPROMPT='%F{magenta}⬢ ━❰%f %{%B%F{blue}%}%~%{%f%b%} %F{magenta}❱━⬢%f'
 
 #------------------------------
