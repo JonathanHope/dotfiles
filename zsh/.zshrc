@@ -48,7 +48,7 @@ alias udm='udisksctl mount -b /dev/sdb1'
 alias udu='udisksctl unmount -b /dev/sdb1'
 alias restart='sudo shutdown -r now'
 
-# usage: extract <filename>
+# usage: extract <file name>
 extract ()
 {
   if [ -f $1 ] ; then
@@ -84,8 +84,15 @@ function up {
     fi
 }
 
-#usage nix? <package name>
-function search-packages ()
+#usage find-package <file name>
+function find-package ()
 {
-    nix-env -qa \* -P | grep -i "$1" | less;
+    nix-env -qa \* -P | grep -i "$1" | grep -o "^[^ ]*"
+}
+
+
+#usage find-package <package name>
+function find-file ()
+{
+    find . ! -readable -prune -o -name "$1" | grep "$1";
 }
