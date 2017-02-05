@@ -1,0 +1,17 @@
+#!/run/current-system/sw/bin/awk -f
+
+/^_NET_CURRENT_DESKTOP/ {
+    if ($3 == 0) {
+        print ("❶");
+    } else if ($3 == 1) {
+        print ("❷");
+    } else if ($3 == 2) {
+        print ("❸");
+    } else if ($3 == 3) {
+        print ("❹");
+    } else if ($3 == 4) {
+        print ("❺");
+    }
+
+    fflush();
+}
