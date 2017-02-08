@@ -1,5 +1,6 @@
 [options]
 font = PragmataPro Mono 10
+dynamic_title = true
 
 [colors]
 

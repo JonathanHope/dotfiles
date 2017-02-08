@@ -1,8 +1,14 @@
 #!/run/current-system/sw/bin/awk -f
 
-/.*/ {
+/(.*)/ {
     if ($1 != "") {
-        print ($1);
+        if (length($0) > 50) {
+            title = substr($0, 1, 50);
+            elipses = "...";
+            print title elipses;
+        } else {
+            print ($0);
+        }
     } else  {
         print ("N/A");
     }

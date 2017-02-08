@@ -1,0 +1,9 @@
+#!/bin/sh
+
+type=`nmcli -t -f state,type,connection dev | grep 'connected' | sed -n 1p | awk '{match($0,"([^:]+):([^:]+):([^:]+)",a)}END{print a[2]}'`
+
+if [ "$type" == "wifi" ]; then
+    echo -e '\uf1eb '
+else
+    echo -e '\uf066 '
+fi

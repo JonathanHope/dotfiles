@@ -1,2 +1,3 @@
-* TODO Use lemonbar as a panel.
+* TODO Better icons in systray.
 * TODO Why is keepass so ugly?
+* TODO Screen locker.

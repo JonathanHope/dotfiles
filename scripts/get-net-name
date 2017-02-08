@@ -1,0 +1,9 @@
+#!/bin/sh
+
+name=`nmcli -t -f state,type,connection dev | grep 'connected' | sed -n 1p | awk '{match($0,"([^:]+):([^:]+):([^:]+)",a)}END{print a[3]}'`
+
+if [[ $name == *"Wired"* ]]; then
+    echo "Wired"
+else
+    echo "$name"
+fi

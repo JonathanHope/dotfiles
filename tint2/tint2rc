@@ -8,7 +8,7 @@ border_sides = B
 # General Panel Configuration
 panel_monitor = 1
 panel_position = top center
-panel_items = EEEEEETEEES
+panel_items = EEEEEEETEEEEEEEEEEEEEEEEEES
 panel_size = 0 24
 panel_margin = 16 0
 panel_padding = 0 0 0
@@ -75,6 +75,15 @@ execp_centered = 0
 execp_padding = 0 0 0 0
 execp_tooltip = ""
 
+# Title Icon
+execp = new
+execp_command = echo -e '\uf2d2 '
+execp_interval = 0
+execp_font = FontAwesome 9
+execp_font_color = #dfe1e8 100
+execp_centered = 0
+execp_tooltip = ""
+
 # Show Title of Current Window
 execp = new
 execp_command = xtitle -s | get-window-title
@@ -123,9 +132,158 @@ execp_centered = 0
 execp_padding = 0 0 0 0
 execp_tooltip = ""
 
-# Show Date/Time
+# Network Icon
 execp = new
-execp_command = date "+%m/%d/%y %H:%M:%S"
+execp_command = get-net-icon
+execp_interval = 1
+execp_font = FontAwesome 10
+execp_font_color = #dfe1e8 100
+execp_centered = 0
+execp_tooltip = ""
+
+# Show Current Network
+execp = new
+execp_command = get-net-name
+execp_interval = 1
+execp_continuous = 1
+execp_font = PragmataPro Bold 10
+execp_font_color = #ebcb8b 100
+execp_centered = 0
+execp_padding = 0 0 0 0
+execp_tooltip = ""
+
+# Divider End
+execp = new
+execp_command = echo " ⬢"
+execp_interval = 0
+execp_font = PragmataPro Mono 11
+execp_font_color = #b48ead 100
+execp_centered = 0
+execp_padding = 0 0 0 0
+execp_tooltip = ""
+
+# Divider Start
+execp = new
+execp_command = echo "━⬢ "
+execp_interval = 0
+execp_font = PragmataPro Mono 11
+execp_font_color = #b48ead 100
+execp_centered = 0
+execp_padding = 0 0 0 0
+execp_tooltip = ""
+
+# Volume Icon
+execp = new
+execp_command = echo -e '\uf028 '
+execp_interval = 0
+execp_font = FontAwesome 10
+execp_font_color = #dfe1e8 100
+execp_centered = 0
+execp_tooltip = ""
+
+# Show Volume
+execp = new
+execp_command = amixer sget Master | grep 'dB' | awk '{match($0,"\\[([1]?[0-9]?[0-9]%)\\]",a)}END{print a[1]}'
+execp_interval = 1
+execp_continuous = 0
+execp_font = PragmataPro Bold 10
+execp_font_color = #c0c5ce 100
+execp_centered = 0
+execp_padding = 0 0 0 0
+execp_tooltip = ""
+
+# Divider End
+execp = new
+execp_command = echo " ⬢"
+execp_interval = 0
+execp_font = PragmataPro Mono 11
+execp_font_color = #b48ead 100
+execp_centered = 0
+execp_padding = 0 0 0 0
+execp_tooltip = ""
+
+# Divider Start
+execp = new
+execp_command = echo "━⬢ "
+execp_interval = 0
+execp_font = PragmataPro Mono 11
+execp_font_color = #b48ead 100
+execp_centered = 0
+execp_padding = 0 0 0 0
+execp_tooltip = ""
+
+# Battery Icon
+execp = new
+execp_command = echo -e '\uf240 '
+execp_interval = 0
+execp_font = FontAwesome 10
+execp_font_color = #dfe1e8 100
+execp_centered = 0
+execp_tooltip = ""
+
+# Show Battery Charge
+execp = new
+execp_command = acpi -V | grep -E 'Battery 0: Charging|Discharging' | awk '{match($0,"[1]?[0-9][0-9]%",a)}END{print a[0]}'
+execp_interval = 1
+execp_continuous = 0
+execp_font = PragmataPro Bold 10
+execp_font_color = #ab7967 100
+execp_centered = 0
+execp_padding = 0 0 0 0
+execp_tooltip = ""
+
+# Divider End
+execp = new
+execp_command = echo " ⬢"
+execp_interval = 0
+execp_font = PragmataPro Mono 11
+execp_font_color = #b48ead 100
+execp_centered = 0
+execp_padding = 0 0 0 0
+execp_tooltip = ""
+
+# Divider Start
+execp = new
+execp_command = echo "━⬢ "
+execp_interval = 0
+execp_font = PragmataPro Mono 11
+execp_font_color = #b48ead 100
+execp_centered = 0
+execp_padding = 0 0 0 0
+execp_tooltip = ""
+
+# Date Icon
+execp = new
+execp_command = echo -e '\uf073 '
+execp_interval = 0
+execp_font = FontAwesome 9
+execp_font_color = #dfe1e8 100
+execp_centered = 0
+execp_tooltip = ""
+
+# Show Date
+execp = new
+execp_command = date "+%m/%d/%y "
+execp_interval = 1
+execp_continuous = 1
+execp_font = PragmataPro Bold 10
+execp_font_color = #8fa1b3 100
+execp_centered = 0
+execp_padding = 0 0 0 0
+execp_tooltip = ""
+
+# Time Icon
+execp = new
+execp_command = echo -e '\uf017 '
+execp_interval = 0
+execp_font = FontAwesome 10
+execp_font_color = #dfe1e8 100
+execp_centered = 0
+execp_tooltip = ""
+
+# Show Time
+execp = new
+execp_command = date "+%H:%M:%S"
 execp_interval = 1
 execp_continuous = 1
 execp_font = PragmataPro Bold 10
