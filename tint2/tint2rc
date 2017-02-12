@@ -214,8 +214,8 @@ execp_tooltip = ""
 
 # Battery Icon
 execp = new
-execp_command = echo -e '\uf240 '
-execp_interval = 0
+execp_command = get-power-icon
+execp_interval = 1
 execp_font = FontAwesome 10
 execp_font_color = #dfe1e8 100
 execp_centered = 0
@@ -223,7 +223,7 @@ execp_tooltip = ""
 
 # Show Battery Charge
 execp = new
-execp_command = acpi -V | grep -E 'Battery 0: Charging|Discharging' | awk '{match($0,"[1]?[0-9][0-9]%",a)}END{print a[0]}'
+execp_command = acpi -V | grep -E 'Battery 0: Charging|Discharging' | awk '{match($0,"[1]?[0-9]?[0-9]%",a)}END{print a[0]}'
 execp_interval = 1
 execp_continuous = 0
 execp_font = PragmataPro Bold 10

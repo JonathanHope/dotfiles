@@ -88,3 +88,9 @@ function find-file ()
 {
     find . ! -readable -prune -o -name "$1" | grep "$1";
 }
+
+#usage find-process <package name>
+function find-process ()
+{
+    ps -Al | grep "$1";
+}
