@@ -2,7 +2,7 @@
 # Prompt
 #------------------------------
 
-PROMPT='%F{magenta}⬢ ━❰%f %{%B%F{green}%}%n%{%f%b%}%F{cyan} %B➤%b%f %{%B%F{red}%}%m%{%f%b%} %F{magenta}❱━⬢%f  %B%F{yellow}𝛌%f%b '
+PROMPT='%F{magenta}⬢ ━❰%f %{%B%F{green}%}%n%{%f%b%}%F{cyan} %B➤%b%f  %{%B%F{red}%}%m%{%f%b%} %F{magenta}❱━⬢%f  %B%F{yellow}𝛌%f%b '
 RPROMPT='%F{magenta}⬢ ━❰%f %{%B%F{blue}%}%~%{%f%b%} %F{magenta}❱━⬢%f'
 
 #------------------------------
@@ -39,6 +39,11 @@ alias magit='emacs --eval "(revert-default-directory)" --eval "(magit-status)" -
 alias udm='udisksctl mount -b /dev/sdb1'
 alias udu='udisksctl unmount -b /dev/sdb1'
 alias restart='sudo shutdown -r now'
+alias find='fd -H'
+alias grep='rg --hidden'
+alias ls='exa --long'
+alias man='tldr'
+alias top='htop'
 
 # usage: extract <file name>
 extract ()
@@ -82,15 +87,14 @@ function find-package ()
     nix-env -qa \* -P | grep -i "$1" | grep -o "^[^ ]*"
 }
 
-
-#usage find-package <package name>
-function find-file ()
-{
-    find . ! -readable -prune -o -name "$1" | grep "$1";
-}
-
 #usage find-process <package name>
 function find-process ()
 {
     ps -Al | grep "$1";
 }
+
+PATH="/home/jhope/perl5/bin${PATH:+:${PATH}}"; export PATH;
+PERL5LIB="/home/jhope/perl5/lib/perl5${PERL5LIB:+:${PERL5LIB}}"; export PERL5LIB;
+PERL_LOCAL_LIB_ROOT="/home/jhope/perl5${PERL_LOCAL_LIB_ROOT:+:${PERL_LOCAL_LIB_ROOT}}"; export PERL_LOCAL_LIB_ROOT;
+PERL_MB_OPT="--install_base \"/home/jhope/perl5\""; export PERL_MB_OPT;
+PERL_MM_OPT="INSTALL_BASE=/home/jhope/perl5"; export PERL_MM_OPT;

@@ -94,6 +94,7 @@ execp_font_color = #a3be8c 100
 execp_centered = 0
 execp_padding = 0 0 0 0
 execp_tooltip = ""
+execp_lclick_command = rofi -show window
 
 # Divider End
 execp = new

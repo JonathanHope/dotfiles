@@ -15,7 +15,8 @@ bspc config normal_border_color '#2B303B'
 xsetroot -cursor_name left_ptr
 
 # I will need this soon.
-# bspc config click_to_focus true
+bspc config click_to_focus true
+bspc rule -a Emacs state=tiled
 
 bspc monitor -d ❶ ❷ ❸ ❹ ❺
 
