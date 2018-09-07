@@ -41,7 +41,7 @@ alias udu='udisksctl unmount -b /dev/sdb1'
 alias restart='sudo shutdown -r now'
 alias find='fd -H'
 alias grep='rg --hidden'
-alias ls='exa --long'
+alias ls='exa --long --all'
 alias man='tldr'
 alias top='htop'
 
