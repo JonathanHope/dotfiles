@@ -184,7 +184,7 @@ execp_tooltip = ""
 
 # Show Volume
 execp = new
-execp_command = amixer sget Master | grep 'dB' | awk '{match($0,"\\[([1]?[0-9]?[0-9]%)\\]",a)}END{print a[1]}'
+execp_command = amixer sget Master | grep 'Front Left: Playback' | awk '{match($0,"\\[([1]?[0-9]?[0-9]%)\\]",a)}END{print a[1]}'
 execp_interval = 1
 execp_continuous = 0
 execp_font = PragmataPro Bold 10
