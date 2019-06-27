@@ -44,6 +44,9 @@ alias grep='rg --hidden'
 alias ls='exa --long --all'
 alias man='tldr'
 alias top='htop'
+alias cat='bat'
+alias preview="fzf --preview 'bat --color \"always\" {}' --bind='ctrl-o:execute(emacs {})+abort'"
+alias fzf="fzf --bind='ctrl-o:execute(emacs {})+abort'"
 
 # usage: extract <file name>
 extract ()
